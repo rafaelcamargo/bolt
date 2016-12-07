@@ -1,7 +1,7 @@
 {
   "name": "bolt",
   "scripts": {
-    "postinstall": "bower install --allow-root",
+    "postinstall": "./node_modules/.bin/bower install --allow-root",
     "test": "make build && make karma",
     "start": "make prodServer",
     "remove-remote": "rm -rf .git",
