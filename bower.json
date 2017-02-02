@@ -11,12 +11,11 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.5.11",
+    "angular": "latest",
     "angular-mocks": "latest",
     "angular-resource": "latest",
     "angular-local-storage": "latest",
-    "ui-router": "latest",
-    "ui-router-extras": "latest",
+    "angular-ui-router": "latest",
     "lodash": "latest",
     "ngDialog": "latest"
   }
