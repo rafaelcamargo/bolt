@@ -1,17 +1,17 @@
-var argv = require('yargs').argv;
-var gulp = require('gulp');
+const argv = require('yargs').argv;
+const gulp = require('gulp');
 
-var gulpLoadPlugins = require('gulp-load-plugins');
-var plugins = gulpLoadPlugins({
+const gulpLoadPlugins = require('gulp-load-plugins');
+const plugins = gulpLoadPlugins({
 	scope: ['devDependencies']
 });
 
-var folder = argv.compress ? 'dist' : 'www';
+const folder = argv.compress ? 'dist' : 'www';
 
-var options = {
-	argv : argv,
+const options = {
+	argv,
+	folder,
 	pattern : ['gulp/**/*.js'],	
-	folder : folder,
 	env : argv.compress ? 'production' : 'testing',
 	devPaths : {
 		base      : 'src/',
