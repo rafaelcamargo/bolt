@@ -3,8 +3,8 @@ const runSequence = require('run-sequence');
 module.exports = (gulp, options, plugins) => {
 	gulp.task('compile', (cb) => {
 		runSequence(
+			'lint',
 			[
-				'lint',
 				'scripts', 
 				'styles', 
 				'images', 
