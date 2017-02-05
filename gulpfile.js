@@ -13,6 +13,7 @@ const options = {
 	folder,
 	pattern : ['gulp/**/*.js'],
 	env : argv.compress ? 'production' : 'testing',
+	bowerDirectory : './bower_components',
 	devPaths : {
 		base      : 'src/',
 		baseApp   : 'src/app',

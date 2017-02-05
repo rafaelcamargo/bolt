@@ -6,7 +6,7 @@ module.exports = (gulp, options, plugins) => {
 			port: 1337,
 			root: options.folder,
 			base: 'http://localhost',
-			fallback: options.folder + '/index.html',
+			fallback: `${options.folder}/index.html`,
 			livereload: !options.argv.compress
 		});
 

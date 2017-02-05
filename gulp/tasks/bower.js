@@ -5,7 +5,7 @@ module.exports = (gulp, options, plugins) => {
 		const jsBowerFiles = bowerFiles({
 			filter: /\.js$/i,
 			paths: {
-				bowerDirectory: './bower_components'
+				bowerDirectory: options.bowerDirectory
 			}
 		});
 
@@ -28,7 +28,7 @@ module.exports = (gulp, options, plugins) => {
 		const cssBowerFiles = bowerFiles({
 			filter: /\.css$/i,
 			paths: {
-				bowerDirectory: './bower_components'
+				bowerDirectory: options.bowerDirectory
 			}
 		});
 
