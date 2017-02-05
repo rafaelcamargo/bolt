@@ -11,7 +11,7 @@ const folder = argv.compress ? 'dist' : 'www';
 const options = {
 	argv,
 	folder,
-	pattern : ['gulp/**/*.js'],	
+	pattern : ['gulp/**/*.js'],
 	env : argv.compress ? 'production' : 'testing',
 	devPaths : {
 		base      : 'src/',
@@ -26,11 +26,11 @@ const options = {
 		templates : 'src/app/**/*.html'
 	},
 	distPaths : {
-		app      : folder + '/app',
-		allFiles : folder + '/**/*',
-		styles   : folder + '/assets/styles',
-		images   : folder + '/assets/images',
-		fonts    : folder + '/assets/fonts'
+		app      : `${folder}/app`,
+		allFiles : `${folder}/**/*`,
+		styles   : `${folder}/assets/styles`,
+		images   : `${folder}/assets/images`,
+		fonts    : `${folder}/assets/fonts`
 	}
 }
 
