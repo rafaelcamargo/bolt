@@ -1,5 +1,4 @@
-(function() {
-	'use strict';
+( function() {
 
 	function HomeTestController(
 		$scope
@@ -11,6 +10,6 @@
 		init();
 	}
 
-	angular.module('app').controller('homeTestController', ['$scope', HomeTestController]);
+	angular.module( 'app' ).controller( 'homeTestController', ['$scope', HomeTestController] );
 
-})();
+}() );

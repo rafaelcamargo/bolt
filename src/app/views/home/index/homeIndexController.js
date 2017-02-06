@@ -1,5 +1,4 @@
-(function() {
-	'use strict';
+( function() {
 
 	function HomeIndexController(
 		$scope
@@ -11,6 +10,6 @@
 		init();
 	}
 
-	angular.module('app').controller('homeIndexController', ['$scope', HomeIndexController]);
+	angular.module( 'app' ).controller( 'homeIndexController', ['$scope', HomeIndexController] );
 
-})();
+}() );

@@ -1,12 +1,12 @@
-(function() {
-	function Routes($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider, $httpProvider, $locationProvider) {
+( function() {
+	function Routes( $stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider, $httpProvider, $locationProvider ) {
 		$stateProvider
-			.state('App', {
+			.state( 'App', {
 				abstract: true,
 				templateUrl: '/app/views/main/mainTemplate.html',
 				controller: 'mainController'
-			})
-			.state({
+			} )
+			.state( {
 				name: 'App.home',
 				abstract: true,
 				views: {
@@ -15,8 +15,8 @@
 						controller: 'homeController'
 					}
 				}
-			})
-			.state({
+			} )
+			.state( {
 				name: 'App.home.index',
 				url: '/home',
 				views: {
@@ -25,8 +25,8 @@
 						controller: 'homeIndexController'
 					}
 				}
-			})
-			.state({
+			} )
+			.state( {
 				name: 'App.home.test',
 				url: '/test',
 				views: {
@@ -35,12 +35,12 @@
 						controller: 'homeTestController'
 					}
 				}
-			});
+			} );
 
-		$urlRouterProvider.otherwise('/home');
-		$locationProvider.html5Mode(true);
+		$urlRouterProvider.otherwise( '/home' );
+		$locationProvider.html5Mode( true );
 	}
 
-	angular.module('app').config(['$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider', '$httpProvider', '$locationProvider', Routes]);
+	angular.module( 'app' ).config( ['$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider', '$httpProvider', '$locationProvider', Routes] );
 
-})();
+}() );

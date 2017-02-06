@@ -1,5 +1,4 @@
-(function() {
-	'use strict';
+( function() {
 
 	function MainController(
 		$scope
@@ -12,7 +11,7 @@
 		init();
 	}
 
-	angular.module('app')
-		.controller('mainController', ['$scope', MainController]);
+	angular.module( 'app' )
+		.controller( 'mainController', ['$scope', MainController] );
 
-})();
+}() );

@@ -1,5 +1,4 @@
-(function() {
-	'use strict';
+( function() {
 
 	function HomeController(
 		$scope
@@ -7,16 +6,16 @@
 		function init() {
 			// @if NODE_ENV='testing'
 			$scope.test = 'testing';
-			// @endif 
+			// @endif
 
 			// @if NODE_ENV='production'
 			$scope.test = 'production';
-			// @endif 
+			// @endif
 		}
 
 		init();
 	}
 
-	angular.module('app').controller('homeController', ['$scope', HomeController]);
+	angular.module( 'app' ).controller( 'homeController', ['$scope', HomeController] );
 
-})();
+}() );

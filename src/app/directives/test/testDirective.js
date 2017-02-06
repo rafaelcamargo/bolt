@@ -1,5 +1,4 @@
-(function() {
-	'use strict';
+( function() {
 
 	function testDirective() {
 		return {
@@ -9,6 +8,6 @@
 		};
 	}
 
-	angular.module('app')
-		.directive('testDirective', [testDirective]);
-})();
+	angular.module( 'app' )
+		.directive( 'testDirective', [testDirective] );
+}() );

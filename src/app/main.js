@@ -1,4 +1,4 @@
-(function() {
+( function() {
 	function App() {
 		return [
 			'templates',
@@ -8,6 +8,6 @@
 	}
 
 	angular
-		.module('app', App());
+		.module( 'app', App() );
 
-})();
+}() );
