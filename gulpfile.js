@@ -1,18 +1,19 @@
-var argv = require('yargs').argv;
-var gulp = require('gulp');
+const argv = require('yargs').argv;
+const gulp = require('gulp');
 
-var gulpLoadPlugins = require('gulp-load-plugins');
-var plugins = gulpLoadPlugins({
+const gulpLoadPlugins = require('gulp-load-plugins');
+const plugins = gulpLoadPlugins({
 	scope: ['devDependencies']
 });
 
-var folder = argv.compress ? 'dist' : 'www';
+const folder = argv.compress ? 'dist' : 'www';
 
-var options = {
-	argv : argv,
-	pattern : ['gulp/**/*.js'],	
-	folder : folder,
+const options = {
+	argv,
+	folder,
+	pattern : ['gulp/**/*.js'],
 	env : argv.compress ? 'production' : 'testing',
+	bowerDirectory : './bower_components',
 	devPaths : {
 		base      : 'src/',
 		baseApp   : 'src/app',
@@ -26,11 +27,11 @@ var options = {
 		templates : 'src/app/**/*.html'
 	},
 	distPaths : {
-		app      : folder + '/app',
-		allFiles : folder + '/**/*',
-		styles   : folder + '/assets/styles',
-		images   : folder + '/assets/images',
-		fonts    : folder + '/assets/fonts'
+		app      : `${folder}/app`,
+		allFiles : `${folder}/**/*`,
+		styles   : `${folder}/assets/styles`,
+		images   : `${folder}/assets/images`,
+		fonts    : `${folder}/assets/fonts`
 	}
 }
 
