@@ -13,7 +13,8 @@ const options = {
 	folder,
 	pattern : ['gulp/**/*.js'],
 	env : argv.compress ? 'production' : 'testing',
-	bowerDirectory : './bower_components',
+	bowerDirectory : `${__dirname}/bower_components`,
+	karmaConfig : `${__dirname}/karma.conf.js`,
 	devPaths : {
 		base      : 'src/',
 		baseApp   : 'src/app',
@@ -32,6 +33,9 @@ const options = {
 		styles   : `${folder}/assets/styles`,
 		images   : `${folder}/assets/images`,
 		fonts    : `${folder}/assets/fonts`
+	},
+	tests : {
+		js : 'tests/**/*.js'
 	}
 }
 
