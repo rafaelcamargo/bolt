@@ -7,7 +7,7 @@ Sugestão de "kickoff" para camada frontend de novos microservices.
 - Gerar uma distribution simples, que pode ser usada em qualquer ambiente
 - Diminuir a quantidade de requests necessários para a aplicação rodar
 - Migrar para um task runner mais performático
-- Simplificar ao máximo o início do desenvolvimento de interfaces 
+- Simplificar ao máximo o início do desenvolvimento de interfaces
 para novos projetos
 - IDE's free
 
@@ -18,22 +18,22 @@ para novos projetos
 git clone git@github.com:DomPhysis/bolt.git
 ```
 
-- Instalando dependências 
+- Instalando dependências
 
-```npm install``` ou ```make setup```
+```npm install```
 
 Ao finalizar, ele roda também o comando ```bower install``` para dependências do browser
 
 - Erguer server de desenvolvimento
 
-```make server``` ou ```gulp up```
+```npm run server```
 
-##Build desenvolvimento ( não minificada ) 
+##Build desenvolvimento ( não minificada )
 - Gerar www
 
-```gulp build``` ou ```make build```
+```npm run compile```
 
-##Build Liberação ( minificada ) 
+##Build Liberação ( minificada )
 - Gerar distribution
 
-```gulp build --compress``` ou ```make dist```
+```npm run build```
