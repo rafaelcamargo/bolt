@@ -5,14 +5,14 @@ module.exports = (gulp, options, plugins) => {
 		runSequence(
 			'lint',
 			[
-				'scripts', 
-				'styles', 
-				'images', 
+				'scripts',
+				'styles',
+				'images',
 				'fonts'
-			], 
-			'templates', 
-			'index', 
-			'reload', 
+			],
+			'templates',
+			'index',
+			'reload',
 			cb
 		);
 	});
@@ -20,21 +20,34 @@ module.exports = (gulp, options, plugins) => {
 	gulp.task('up', (cb) => {
 		runSequence(
 			'clean',
-			'bower:styles', 
-			'bower:scripts', 
-			'compile', 
-			'watchers', 
-			'server', 
+			'bower:styles',
+			'bower:scripts',
+			'compile',
+			'watchers',
+			'server',
 			cb
 		);
 	});
 
 	gulp.task('build', (cb) => {
 		runSequence(
-			'clean', 
+			'clean',
 			'bower:styles',
-			'bower:scripts', 
-			'compile', 
+			'bower:scripts',
+			'compile',
+			cb
+		);
+	});
+
+	gulp.task('tests', (cb) => {
+		runSequence(
+			'clean',
+			[
+				'bower:scripts',
+				'scripts',
+				'templates'
+			],
+			'tests:javascript',
 			cb
 		);
 	});
